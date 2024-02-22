@@ -11,5 +11,9 @@
 }
 
 .container__content .forms {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
   margin-top: 10px;
+  gap: 1.5rem;
 }

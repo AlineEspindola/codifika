@@ -1,0 +1,18 @@
+button {
+  font-family: var(--font-nunito);
+  font-weight: var(--font-weight);
+  font-size: 15px;
+  color: var(--font-color);
+  background-color: white;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 6px 13px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-top: 9px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

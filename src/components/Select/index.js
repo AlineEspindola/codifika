@@ -5,6 +5,7 @@ class Select extends Component {
     return(
       <div>
         <select>
+          <option className='teste'>Normal</option>
           <option>Pig Latim</option>
           <option>Invertido</option>
           <option>Númerico</option>
