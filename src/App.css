@@ -1,0 +1,14 @@
+.container {
+  max-width: 100%;
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+}
+
+.container__content .forms {
+  margin-top: 10px;
+}

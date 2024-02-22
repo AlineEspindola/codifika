@@ -1,0 +1,13 @@
+.top-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.top-text label {
+  font-family: var(--font-nunito);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  color: var(--font-color);
+}

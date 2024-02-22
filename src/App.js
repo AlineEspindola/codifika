@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './reset.css';
+import './vars.css';
 import './App.css';
 import Form from './components/Form';
 import Button from './components/Button';
