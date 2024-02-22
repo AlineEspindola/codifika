@@ -7,6 +7,11 @@ import logo from './assets/logo.png';
 class App extends Component {
 
   render() {
+    const formProps = {
+      yourText: "Seu texto",
+      yourTranslatedText: "Seu texto traduzido"
+    }
+
     return(
       <div className="container">
         <div className='container__content'>
@@ -15,11 +20,11 @@ class App extends Component {
           </figure>
           <div className='forms'>
             <form>
-              <Form/>
+              <Form labelText={formProps.yourText}/>
               <Button/>
             </form>
             <form>
-              <Form/>
+              <Form labelText={formProps.yourTranslatedText}/>
             </form>
           </div>
         </div>
