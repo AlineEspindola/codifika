@@ -11,3 +11,13 @@
   font-size: var(--font-size);
   color: var(--font-color);
 }
+
+textarea {
+  border-radius: 15px;
+  resize: none;
+  padding: 18px 15px;
+  font-family: var(--font-nunito);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  color: var(--font-color);
+}

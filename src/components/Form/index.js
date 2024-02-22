@@ -11,7 +11,7 @@ class Form extends Component {
           <label>{labelText}</label>
           <Select/>
         </div>
-        <textarea rows="7" cols="50"></textarea>
+        <textarea rows="4" cols="50" placeholder='Escreva seu texto...'></textarea>
       </div>
     )
   }
