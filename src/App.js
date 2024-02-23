@@ -10,7 +10,9 @@ class App extends Component {
   render() {
     const formProps = {
       yourText: "Seu texto",
-      yourTranslatedText: "Seu texto traduzido"
+      yourTranslatedText: "Seu texto traduzido",
+      textWriteText: "Escreva seu texto...",
+      textTranslation: "Tradução"
     }
 
     return(
@@ -21,11 +23,11 @@ class App extends Component {
           </figure>
           <div className='forms'>
             <form>
-              <Form labelText={formProps.yourText}/>
+              <Form labelText={formProps.yourText} placeholderText={formProps.textWriteText}/>
               <Button/>
             </form>
             <form>
-              <Form labelText={formProps.yourTranslatedText}/>
+              <Form labelText={formProps.yourTranslatedText} placeholderText={formProps.textTranslation}/>
             </form>
           </div>
         </div>

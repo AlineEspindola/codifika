@@ -4,6 +4,7 @@ import './Form.css';
 class Form extends Component {
   render() {
     const { labelText } = this.props;
+    const { placeholderText } = this.props;
 
     return(
       <div>
@@ -11,7 +12,7 @@ class Form extends Component {
           <label>{labelText}</label>
           <Select/>
         </div>
-        <textarea rows="4" cols="50" placeholder='Escreva seu texto...'></textarea>
+        <textarea rows="4" cols="50" placeholder={placeholderText}></textarea>
       </div>
     )
   }
