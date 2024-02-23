@@ -15,7 +15,11 @@ class Form extends Component {
   changeText(e) {
     let enteredValue = e.target.value;
     this.setState({text: enteredValue});
-  }
+
+    if (this.props.onTextChange) {
+      this.props.onTextChange(enteredValue);
+    }
+  } 
 
   render() {
     const { labelText, placeholderText, typeable } = this.props;
@@ -26,7 +30,7 @@ class Form extends Component {
           <label>{labelText}</label>
           <Select/>
         </div>
-        <textarea rows="4" cols="50" readOnly={typeable} value={this.state.textarea} onChange={this.changeText} placeholder={placeholderText}></textarea>
+        <textarea rows="4" cols="50" readOnly={typeable} value={this.state.text} onChange={this.changeText} placeholder={placeholderText}></textarea>
       </div>
     )
   }

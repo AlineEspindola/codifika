@@ -5,24 +5,21 @@ class Select extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      select: {
-        language: ''
-      }
+      select: 'normal'
     }
 
     this.getLanguage = this.getLanguage.bind(this);
   }
 
   getLanguage(e) {
-    const select = { ...this.state.select };
-    select.language = e.target.value;
-    this.setState({ select });
+    const selectedLanguage = e.target.value;
+    this.setState({ select: selectedLanguage });
   }
 
   render() {
     return(
       <div>
-        <select onChange={this.getLanguage} value={this.state.language} name="select">
+        <select onChange={this.getLanguage} value={this.state.select} name="select">
           <option value="normal">Normal</option>
           <option value="inverted">Invertido</option>
         </select>

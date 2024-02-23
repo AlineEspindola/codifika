@@ -7,6 +7,26 @@ import Button from './components/Button';
 import logo from './assets/logo.png';
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      translatedText: 'Tradução'
+    }
+
+    this.handleFormTextChange = this.handleFormTextChange.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  handleFormTextChange = (text) => {
+    text = text.split("").reverse().join("");
+    this.setState({translatedText: text});
+  }
+
+  handleButtonClick = () => {
+    const translated = this.state.translatedText.split("").reverse().join("");
+    this.setState({ translatedText: translated });
+  }
+
   render() {
     const formProps = {
       yourText: "Seu texto",
@@ -14,7 +34,7 @@ class App extends Component {
       textWriteText: "Escreva seu texto...",
       textTranslation: "Tradução",
       void: "",
-      readOnly: "readOnly"
+      readOnly: "readOnly",
     }
 
     return(
@@ -26,10 +46,10 @@ class App extends Component {
           <div className='forms'>
             <form>
               <Form typeable={formProps.void} labelText={formProps.yourText} placeholderText={formProps.textWriteText}/>
-              <Button/>
+              <Button onClick={this.handleButtonClick}/>
             </form>
             <form>
-              <Form typeable={formProps.readOnly} labelText={formProps.yourTranslatedText} placeholderText={formProps.textTranslation}/>
+              <Form value={this.state.translatedText} typeable={formProps.readOnly} labelText={formProps.yourTranslatedText} placeholderText={formProps.textTranslation}/>
             </form>
           </div>
         </div>
