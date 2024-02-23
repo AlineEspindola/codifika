@@ -12,7 +12,9 @@ class App extends Component {
       yourText: "Seu texto",
       yourTranslatedText: "Seu texto traduzido",
       textWriteText: "Escreva seu texto...",
-      textTranslation: "Tradução"
+      textTranslation: "Tradução",
+      void: "",
+      readOnly: "readOnly"
     }
 
     return(
@@ -23,11 +25,11 @@ class App extends Component {
           </figure>
           <div className='forms'>
             <form>
-              <Form labelText={formProps.yourText} placeholderText={formProps.textWriteText}/>
+              <Form typeable={formProps.void} labelText={formProps.yourText} placeholderText={formProps.textWriteText}/>
               <Button/>
             </form>
             <form>
-              <Form labelText={formProps.yourTranslatedText} placeholderText={formProps.textTranslation}/>
+              <Form typeable={formProps.readOnly} labelText={formProps.yourTranslatedText} placeholderText={formProps.textTranslation}/>
             </form>
           </div>
         </div>

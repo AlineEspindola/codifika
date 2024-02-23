@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Select from '../Select';
 import './Form.css';
 class Form extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -17,8 +18,7 @@ class Form extends Component {
   }
 
   render() {
-    const { labelText } = this.props;
-    const { placeholderText } = this.props;
+    const { labelText, placeholderText, typeable } = this.props;
 
     return(
       <div>
@@ -26,7 +26,7 @@ class Form extends Component {
           <label>{labelText}</label>
           <Select/>
         </div>
-        <textarea rows="4" cols="50" value={this.state.textarea} onChange={this.changeText} placeholder={placeholderText}></textarea>
+        <textarea rows="4" cols="50" readOnly={typeable} value={this.state.textarea} onChange={this.changeText} placeholder={placeholderText}></textarea>
       </div>
     )
   }
